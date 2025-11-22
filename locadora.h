@@ -64,6 +64,7 @@ void tela();
 void telaMain();
 void telaOpcao();
 void telaOpcaoMovimentacao();
+void telaOpcaoRelatorios();
 
 // - * - * - * - * - * - *// 
 //        FUNÇÕES         // 
@@ -77,6 +78,6 @@ void clientes();
 void veiculos();
 void categorias();
 void movimentacao();
-
+void relatorios();
 
 #endif

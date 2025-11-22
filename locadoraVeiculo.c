@@ -35,10 +35,7 @@ int main() {
             break;
 
             case 5:
-                limpaMensagem();
-                gotoxy(3, 23);
-                printf("DIGITOU 5");
-                getch();
+                relatorios();
             break;
 
             case 6:
