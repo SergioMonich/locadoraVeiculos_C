@@ -1,47 +1,55 @@
 /**
-* @file locadoraVeiculo.c
+* @file categorias.c
 * @author Sergio Monich 
-* @date 21/11/2025
-* @brief Main principal
+* @date 22/11/2025
+* @brief  main das funcionalidades de categorias
 */
 
 #include "locadora.h"
 
-int main() {
+void categorias() {
     
     int opcao;
-
+    
     do {
-        telaMain();
+        telaOpcao();
+
+        gotoxy(27, 6);
+        printf("===== MENU CATEGORIAS =====");
 
         limpaMensagem();
         opcao = validaOpcao(3, 23, "Digite uma opcao: ");
 
         switch(opcao) {
             case 1:
-                clientes();
-            break;
-
-            case 2:
-                veiculos();
-            break;
-
-            case 3:
-                categorias();
-            break;
-
-            case 4:
-                movimentacao();
-            break;
-
-            case 5:
                 limpaMensagem();
                 gotoxy(3, 23);
-                printf("DIGITOU 5");
+                printf("DIGITOU 1");
                 getch();
             break;
 
-            case 6:
+            case 2:
+                limpaMensagem();
+                gotoxy(3, 23);
+                printf("DIGITOU 2");
+                getch();
+            break;
+
+            case 3:
+                limpaMensagem();
+                gotoxy(3, 23);
+                printf("DIGITOU 3");
+                getch();
+            break;
+
+            case 4:
+                limpaMensagem();
+                gotoxy(3, 23);
+                printf("DIGITOU 4");
+                getch();
+            break;
+
+            case 5:
             break;
 
             default:
@@ -51,8 +59,6 @@ int main() {
                 getch();
             break;
         }
-    } while (opcao != 6);
-    
-    return 0;
+    } while (opcao < 1 || opcao > 5);
 
 }

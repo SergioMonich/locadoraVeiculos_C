@@ -62,6 +62,8 @@
 
 void tela();
 void telaMain();
+void telaOpcao();
+void telaOpcaoMovimentacao();
 
 // - * - * - * - * - * - *// 
 //        FUNÇÕES         // 
@@ -70,7 +72,11 @@ void telaMain();
 void gotoxy();
 void limpaMensagem();
 void limpaBuffer(void);
-
+int validaOpcao(int x, int y, const char *prompt);
+void clientes();
+void veiculos();
+void categorias();
+void movimentacao();
 
 
 #endif
