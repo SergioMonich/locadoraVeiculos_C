@@ -22,10 +22,7 @@ void clientes() {
 
         switch(opcao) {
             case 1:
-                limpaMensagem();
-                gotoxy(3, 23);
-                printf("DIGITOU 1");
-                getch();
+                incluirClientes();
             break;
 
             case 2:

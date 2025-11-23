@@ -8,6 +8,11 @@
 #include "locadora.h"
 
 int main() {
+
+    ListaClientes ListadeClientes;
+    iniciaListaClientes(&ListadeClientes);
+
+    
     
     int opcao;
 

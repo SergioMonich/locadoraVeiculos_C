@@ -54,7 +54,50 @@
 //        STRUCTS         // 
 // - * - * - * - * - * - *//
 
+/**
+ * @brief Estrutura de Dados (Sem Tag).	Contém apenas os dados puros de um cliente. Isso garante que a lógica de manipulação da lista fique separada dos atributos do cliente
+ * @param idCliente Chave primária, identificador único
+ * @param status 0 = Ativo / 1 = Inativo / 2 = Bloqueado
+ */
 
+typedef struct {
+    int idCliente;
+    char nome[40];
+    char endereco[60];
+    char telefone[15];
+    char cpf[14];
+    char cnh[15];
+    char validadeCnh[15];
+    char dataCadastro[10];
+    int status;
+    int locaçoes;
+    float debitos;
+} Clientes;
+
+/**
+ * @brief Estrutura de Nó. O NÓ da lista. É a unidade que contém o dado e os links de navegação
+ * @param dados Armazena a instância completa dos dados do cliente
+ * @param anterior Ponteiro. O link de auto-referência correto para o nó anterior
+ * @param proximo Ponteiro. O link de auto-referência correto para o próximo nó
+ */
+
+typedef struct ItemClientes {
+    Clientes dados;
+    struct ItemClientes *anterior;
+    struct ItemClientes *proximo;
+} ItemClientes;
+
+/**
+ * @param primeiro Aponta para o primeiro nó da lista (cabeça)
+ * @param ultimo Aponta para o último nó da lista (cauda)
+ * @param tamanhoListaClientes Mantém o tamanho atual da lista, permitindo acesso rápido à contagem
+ */
+
+typedef struct {
+    ItemClientes *primeiro;
+    ItemClientes *ultimo;
+    int tamanhoListaClientes;
+} ListaClientes;
 
 // - * - * - * - * - * - *// 
 //         TELAS          // 
@@ -65,6 +108,7 @@ void telaMain();
 void telaOpcao();
 void telaOpcaoMovimentacao();
 void telaOpcaoRelatorios();
+void telaIncluirClientes();
 
 // - * - * - * - * - * - *// 
 //        FUNÇÕES         // 
@@ -79,5 +123,7 @@ void veiculos();
 void categorias();
 void movimentacao();
 void relatorios();
+void iniciaListaClientes(ListaClientes *Lista);
+void incluirClientes();
 
 #endif
