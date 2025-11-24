@@ -5,6 +5,8 @@
 * @brief  projetar tela de inclusão de clientes na base
 */
 
+#include "locadora.h"
+
 void telaIncluirClientes() {
 
     tela();    
@@ -12,37 +14,49 @@ void telaIncluirClientes() {
     gotoxy(26, 6);
     printf("===== INCLUIR CLIENTES =====");
 
-    gotoxy(10, 8);
-    printf("CODIGO.........: ");
+    gotoxy(3, 7);
+    printf("Codigo: ");
 
-    gotoxy(10, 9);
-    printf("NOME...........: ");
+    gotoxy(3, 9);
+    printf("Nome completo [                                                            ] ");
 
-    gotoxy(10, 10);
-    printf("ENDERECO.......: ");
+    gotoxy(3, 11);
+    printf("CPF [           ]");
 
-    gotoxy(10, 11);
-    printf("TELEFONE.......: ");
+    gotoxy(20, 11);
+    printf("(somente numeros)");
 
-    gotoxy(10, 12);
-    printf("CPF............: ");
+    gotoxy(45, 11);
+    printf("CNH [           ]");
 
-    gotoxy(10, 13);
-    printf("CNH............: ");
+    gotoxy(62, 11);
+    printf("(somente numeros)");
 
-    gotoxy(10, 14);
-    printf("VALIDADE CNH...: ");
+    gotoxy(3, 13);
+    printf("Categoria [  ]");
 
-    gotoxy(10, 15);
-    printf("DATA CADASTRO..: ");
+    gotoxy(43, 13);
+    printf("Validade [        ]");
 
-    gotoxy(10, 16);
-    printf("STATUS.........: ");
+    gotoxy(62, 13);
+    printf("(somente numeros)");
 
-    gotoxy(10, 17);
-    printf("LOACACOES......: ");
+    gotoxy(3, 15);
+    printf("Endereco [                                                                 ]");
 
-    gotoxy(10, 18);
-    printf("DEBITOS........: ");
+    gotoxy(3, 17);
+    printf("Cidade [                                                      ]");
+
+    gotoxy(68, 17);
+    printf("Estado [  ]");
+
+    gotoxy(3, 19);
+    printf("Data Cadastro [        ]");
+
+    gotoxy(27, 19);
+    printf("(somente numeros)");
+
+    gotoxy(3, 21);
+    printf("Status [1 - ATIVO || 2 - INATIVO || 3 - BLOQUEADO]");
 
 }

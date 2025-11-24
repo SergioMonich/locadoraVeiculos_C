@@ -24,7 +24,7 @@ int main() {
 
         switch(opcao) {
             case 1:
-                clientes();
+                clientes(&ListadeClientes);
             break;
 
             case 2:

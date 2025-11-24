@@ -13,6 +13,7 @@ void iniciaListaClientes(ListaClientes *ListaClientes) {
     ListaClientes->primeiro = NULL;
     ListaClientes->ultimo = NULL;
     ListaClientes->tamanhoListaClientes = 0;
+    ListaClientes->proximoIdClientes = 1;
 
 }
 

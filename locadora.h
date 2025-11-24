@@ -63,40 +63,47 @@
 typedef struct {
     int idCliente;
     char nome[40];
-    char endereco[60];
-    char telefone[15];
     char cpf[14];
     char cnh[15];
+    char categoria[2];
     char validadeCnh[15];
+    char endereco[60];
+    char cidade[30];
+    char estado[2];
+    char telefone[15];
     char dataCadastro[10];
     int status;
     int locaçoes;
     float debitos;
 } Clientes;
 
+typedef struct ItemClientes *ponteiroClientes;
+
 /**
  * @brief Estrutura de Nó. O NÓ da lista. É a unidade que contém o dado e os links de navegação
  * @param dados Armazena a instância completa dos dados do cliente
- * @param anterior Ponteiro. O link de auto-referência correto para o nó anterior
- * @param proximo Ponteiro. O link de auto-referência correto para o próximo nó
+ * @param anterior Ponteiro. O link para o nó anterior
+ * @param proximo Ponteiro. O link para o próximo nó
  */
 
 typedef struct ItemClientes {
     Clientes dados;
-    struct ItemClientes *anterior;
-    struct ItemClientes *proximo;
+    ponteiroClientes anterior;
+    ponteiroClientes proximo;
 } ItemClientes;
 
 /**
  * @param primeiro Aponta para o primeiro nó da lista (cabeça)
  * @param ultimo Aponta para o último nó da lista (cauda)
  * @param tamanhoListaClientes Mantém o tamanho atual da lista, permitindo acesso rápido à contagem
+ * @param proximoIdClientes Para que o ID seja sequencial e único, ele não deve ser inicializado dentro da função de inclusão. Em vez disso, usa-se um campo na estrutura de controle para rastrear o último ID atribuído
  */
 
 typedef struct {
     ItemClientes *primeiro;
     ItemClientes *ultimo;
     int tamanhoListaClientes;
+    int proximoIdClientes;
 } ListaClientes;
 
 // - * - * - * - * - * - *// 
@@ -118,12 +125,12 @@ void gotoxy();
 void limpaMensagem();
 void limpaBuffer(void);
 int validaOpcao(int x, int y, const char *prompt);
-void clientes();
+void clientes(ListaClientes *Lista);
 void veiculos();
 void categorias();
 void movimentacao();
 void relatorios();
 void iniciaListaClientes(ListaClientes *Lista);
-void incluirClientes();
+void incluirClientes(ListaClientes *Lista);
 
 #endif

@@ -7,7 +7,7 @@
 
 #include "locadora.h"
 
-void clientes() {
+void clientes(ListaClientes *Lista) {
     
     int opcao;
     
@@ -22,7 +22,7 @@ void clientes() {
 
         switch(opcao) {
             case 1:
-                incluirClientes();
+                incluirClientes(Lista);
             break;
 
             case 2:
