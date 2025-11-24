@@ -18,28 +18,22 @@ void telaIncluirClientes() {
     printf("Codigo: ");
 
     gotoxy(3, 9);
-    printf("Nome completo [                                                            ] ");
+    printf("CPF* [           ]");
 
-    gotoxy(3, 11);
-    printf("CPF [           ]");
+    gotoxy(23, 9);
+    printf("CNH* [           ]");
 
-    gotoxy(20, 11);
-    printf("(somente numeros)");
-
-    gotoxy(45, 11);
-    printf("CNH [           ]");
-
-    gotoxy(62, 11);
-    printf("(somente numeros)");
-
-    gotoxy(3, 13);
+    gotoxy(44, 9);
     printf("Categoria [  ]");
 
-    gotoxy(43, 13);
-    printf("Validade [        ]");
+    gotoxy(3, 11);
+    printf("Validade* [        ]");
 
-    gotoxy(62, 13);
-    printf("(somente numeros)");
+    gotoxy(26, 11);
+    printf("Data Cadastro* [        ]");
+
+    gotoxy(3, 13);
+    printf("Nome completo [                                                            ] ");
 
     gotoxy(3, 15);
     printf("Endereco [                                                                 ]");
@@ -51,12 +45,12 @@ void telaIncluirClientes() {
     printf("Estado [  ]");
 
     gotoxy(3, 19);
-    printf("Data Cadastro [        ]");
+    printf("Telefone* [           ]");
 
-    gotoxy(27, 19);
-    printf("(somente numeros)");
+    gotoxy(29, 19);
+    printf("Status [ ]");
 
-    gotoxy(3, 21);
-    printf("Status [1 - ATIVO || 2 - INATIVO || 3 - BLOQUEADO]");
+    gotoxy(3, 23);
+    printf("*SOMENTE NUMEROS || Status [1-ATIVO 2-INATIVO 3-BLOQUEADO]");
 
 }

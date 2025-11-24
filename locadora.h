@@ -66,7 +66,7 @@ typedef struct {
     char cpf[14];
     char cnh[15];
     char categoria[2];
-    char validadeCnh[15];
+    char validadeCnh[10];
     char endereco[60];
     char cidade[30];
     char estado[2];

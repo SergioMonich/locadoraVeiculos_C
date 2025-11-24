@@ -12,7 +12,7 @@
 
 ponteiroClientes PesquisaCpf(ListaClientes *Lista, const char *pesqCpf) {
 
-    if (Lista == NULL || Lista->primeiro == NULL) {
+    if (Lista == NULL || Lista->Primeiro == NULL) {
         return NULL;
     }
 

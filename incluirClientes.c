@@ -9,6 +9,8 @@
 
 void incluirClientes(ListaClientes *Lista) {
 
+    char pesquisarCpf[14];
+
     if (Lista == NULL) {
         limpaMensagem();
         gotoxy(3, 23);
@@ -35,20 +37,34 @@ void incluirClientes(ListaClientes *Lista) {
     gotoxy(11, 7);
     printf("%d", NovoCliente->Dados.idCliente);
 
-    gotoxy(18, 9);
-    fgets(NovoCliente->Dados.nome, 40, stdin);
+    gotoxy(8, 9);
+    fgets(pesquisarCpf, 14, stdin);
 
-    gotoxy(8, 11);
-    fgets(NovoCliente->Dados.cpf, 14, stdin);
+    ponteiroClientes ClienteExiste = PesquisaCpf(Lista, pesquisarCpf);
 
-    gotoxy(50, 11);
+    if (ClienteExiste != NULL) {
+        limpaMensagem();
+        gotoxy(3, 23);
+        printf("[ERRO] CPF cadastrado no sistema");
+        getch();
+
+        free(NovoCliente);
+        return;
+    }
+
+    strcpy(NovoCliente->Dados.cpf, pesquisarCpf);
+
+    gotoxy(50, 9);
     fgets(NovoCliente->Dados.cnh, 15, stdin);
+
+    gotoxy(18, 11);
+    fgets(NovoCliente->Dados.nome, 40, stdin);
 
     gotoxy(14, 13);
     fgets(NovoCliente->Dados.categoria, 15, stdin);
 
     gotoxy(53, 13);
-    fgets(NovoCliente->Dados.validadeCnh, 15, stdin);
+    fgets(NovoCliente->Dados.validadeCnh, 10, stdin);
 
     gotoxy(13, 15);
     fgets(NovoCliente->Dados.endereco, 60, stdin);
@@ -57,6 +73,9 @@ void incluirClientes(ListaClientes *Lista) {
     fgets(NovoCliente->Dados.cidade, 30, stdin);
 
     gotoxy(76, 17);
-    fgets(NovoCliente->Dados.estado, 60, stdin);
+    fgets(NovoCliente->Dados.estado, 2, stdin);
+
+    gotoxy(17, 19);
+    fgets(NovoCliente->Dados.dataCadastro, 10, stdin);
 
 }
