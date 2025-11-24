@@ -81,27 +81,27 @@ typedef struct ItemClientes *ponteiroClientes;
 
 /**
  * @brief Estrutura de Nó. O NÓ da lista. É a unidade que contém o dado e os links de navegação
- * @param dados Armazena a instância completa dos dados do cliente
- * @param anterior Ponteiro. O link para o nó anterior
- * @param proximo Ponteiro. O link para o próximo nó
+ * @param Dados Armazena a instância completa dos dados do cliente
+ * @param Anterior Ponteiro. O link para o nó anterior
+ * @param Proximo Ponteiro. O link para o próximo nó
  */
 
 typedef struct ItemClientes {
-    Clientes dados;
-    ponteiroClientes anterior;
-    ponteiroClientes proximo;
+    Clientes Dados;
+    ponteiroClientes Anterior;
+    ponteiroClientes Proximo;
 } ItemClientes;
 
 /**
- * @param primeiro Aponta para o primeiro nó da lista (cabeça)
- * @param ultimo Aponta para o último nó da lista (cauda)
+ * @param Primeiro Aponta para o primeiro nó da lista (cabeça)
+ * @param Ultimo Aponta para o último nó da lista (cauda)
  * @param tamanhoListaClientes Mantém o tamanho atual da lista, permitindo acesso rápido à contagem
  * @param proximoIdClientes Para que o ID seja sequencial e único, ele não deve ser inicializado dentro da função de inclusão. Em vez disso, usa-se um campo na estrutura de controle para rastrear o último ID atribuído
  */
 
 typedef struct {
-    ItemClientes *primeiro;
-    ItemClientes *ultimo;
+    ItemClientes *Primeiro;
+    ItemClientes *Ultimo;
     int tamanhoListaClientes;
     int proximoIdClientes;
 } ListaClientes;
@@ -132,5 +132,6 @@ void movimentacao();
 void relatorios();
 void iniciaListaClientes(ListaClientes *Lista);
 void incluirClientes(ListaClientes *Lista);
+ponteiroClientes PesquisaCpf (ListaClientes *Lista, const char *pesqCpf);
 
 #endif

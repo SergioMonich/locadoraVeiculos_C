@@ -27,38 +27,36 @@ void incluirClientes(ListaClientes *Lista) {
         return;
     }
 
-    NovoCliente->dados.idCliente = Lista->proximoIdClientes;
+    NovoCliente->Dados.idCliente = Lista->proximoIdClientes;
     Lista->proximoIdClientes++;
 
     telaIncluirClientes();
-    getch();
 
-    /*
     gotoxy(11, 7);
-    printf("%d", NovoCliente->dados.idCliente);
+    printf("%d", NovoCliente->Dados.idCliente);
 
     gotoxy(18, 9);
-    fgets(NovoCliente->dados.nome, 40, stdin);
+    fgets(NovoCliente->Dados.nome, 40, stdin);
 
     gotoxy(8, 11);
-    fgets(NovoCliente->dados.cpf, 14, stdin);
+    fgets(NovoCliente->Dados.cpf, 14, stdin);
 
     gotoxy(50, 11);
-    fgets(NovoCliente->dados.cnh, 15, stdin);
+    fgets(NovoCliente->Dados.cnh, 15, stdin);
 
     gotoxy(14, 13);
-    fgets(NovoCliente->dados.categoria, 15, stdin);
+    fgets(NovoCliente->Dados.categoria, 15, stdin);
 
     gotoxy(53, 13);
-    fgets(NovoCliente->dados.validadeCnh, 15, stdin);
+    fgets(NovoCliente->Dados.validadeCnh, 15, stdin);
 
     gotoxy(13, 15);
-    fgets(NovoCliente->dados.endereco, 60, stdin);
+    fgets(NovoCliente->Dados.endereco, 60, stdin);
 
     gotoxy(11, 17);
-    fgets(NovoCliente->dados.cidade, 30, stdin);
+    fgets(NovoCliente->Dados.cidade, 30, stdin);
 
     gotoxy(76, 17);
-    fgets(NovoCliente->dados.estado, 60, stdin);
-    */
+    fgets(NovoCliente->Dados.estado, 60, stdin);
+
 }
