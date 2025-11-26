@@ -22,7 +22,7 @@ int main() {
         limpaMensagem();
         opcao = validaOpcao(3, 23, "Digite uma opcao: ");
 
-        switch(opcao) {
+        switch (opcao) {
             case 1:
                 clientes(&ListadeClientes);
             break;

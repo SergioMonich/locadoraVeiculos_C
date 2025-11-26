@@ -62,16 +62,16 @@
 
 typedef struct {
     int idCliente;
-    char nome[40];
     char cpf[14];
     char cnh[15];
     char categoria[2];
     char validadeCnh[10];
+    char dataCadastro[10];
+    char nome[40];
     char endereco[60];
     char cidade[30];
-    char estado[2];
+    char estado[3];
     char telefone[15];
-    char dataCadastro[10];
     int status;
     int locaçoes;
     float debitos;
@@ -132,6 +132,8 @@ void movimentacao();
 void relatorios();
 void iniciaListaClientes(ListaClientes *Lista);
 void incluirClientes(ListaClientes *Lista);
-ponteiroClientes PesquisaCpf (ListaClientes *Lista, const char *pesqCpf);
+ponteiroClientes PesquisaCpf(ListaClientes *Lista, const char *pesqCpf);
+ponteiroClientes PesquisaCnh(ListaClientes *Lista, const char *pesqCnh);
+void inserirListaClientes(ListaClientes *Lista, ponteiroClientes *NovoCliente);
 
 #endif
